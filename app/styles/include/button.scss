@@ -1,0 +1,62 @@
+.btn-colored{
+  background-color: $emphasis;
+  border: 1px solid $emphasis;
+  font-family: Muller;
+  color: white;
+  cursor: pointer;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  transition-duration: 0.2s;
+  letter-spacing: 0.5px;
+}
+.btn-colored:hover{
+  background-color: white;
+  border: 1px solid white;
+  color: $emphasis;
+}
+
+.btn-transparent{
+  border: 1px solid gray;
+  padding: 0 20px;
+  color: $emphasis;
+  text-align: center;
+  font-family: Muller;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  cursor:pointer;
+  text-transform: uppercase;
+  transition-duration: 0.2s;
+  &:hover{
+    background-color: $emphasis;
+    border-color: $emphasis;
+    color: white;
+  }
+}
+.btn-arrow{
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color:#343434;
+  position: relative;
+  font-family: Muller;
+  font-weight: 500;
+  display: block;
+  line-height: 24px;
+}
+.btn-arrow:after{
+  position: absolute;
+  margin-left: 40px;
+  content: '';
+  background-image: url('/assets/img/right-arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 18px;
+  height: 20px;
+}
