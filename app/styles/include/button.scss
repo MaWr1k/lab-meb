@@ -48,15 +48,28 @@
   font-weight: 500;
   display: block;
   line-height: 24px;
+  transition-duration: 0.2s;
+  &:hover{
+    padding-right: 30px;
+    color: $emphasis;
+    &:after{
+      margin-left: 20px;
+    }
+  }
+  &:after{
+    position: absolute;
+    margin-left: 40px;
+    content: '';
+    background-image: url('/assets/img/right-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 18px;
+    height: 20px;
+    transition-duration: 0.2s;
+  }
 }
-.btn-arrow:after{
-  position: absolute;
-  margin-left: 40px;
-  content: '';
-  background-image: url('/assets/img/right-arrow.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 18px;
-  height: 20px;
+
+.dark-section .btn-arrow:after{
+  background-image: url('/assets/img/right-arrow-white.svg');
 }
