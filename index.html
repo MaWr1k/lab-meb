@@ -32,7 +32,32 @@
         <span class="icon-bar"></span>
     </div>
 </header>
-
+<div class="menu-block">
+    <div class="menu-close"><img src="/assets/img/icon/close.svg" alt=""></div>
+    <ul class="menu">
+        <li class="menu-item"><a href="#" class="active">Главная</a></li>
+        <li class="menu-item">
+            <a class="menu-has-children" href="#">Портфолио</a>
+            <ul class="sub-menu">
+                <li><a href="#">Кухни</a></li>
+                <li><a href="#">Шкафы-Купе</a></li>
+                <li><a href="#">Детские</a></li>
+                <li><a href="#">Материалы</a></li>
+            </ul>
+        </li>
+        <li class="menu-item"><a href="">О нас</a></li>
+        <li class="menu-item"><a href="">Контакты</a></li>
+        <li class="menu-item"><a href="">Блог</a></li>
+    </ul>
+    <div class="soc-block">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-google-plus-g"></i></a>
+    </div>
+    <div class="copy">
+        &copy; Лаборатория мебели 2018. Develop by <a href="http://itop.media">iTOP.Media</a>
+    </div>
+</div>
 <section class="first-block dark-section bootstrap-wrapper">
     <div class="section-side-title">Знакомство</div>
     <div class="container">
@@ -54,10 +79,10 @@
             <div class="col-md-6 col-12 my-vertical-align">
                 <div class="section-title">Направления</div>
                 <ul class="list-dir">
-                    <li><a href="">01. Кухни</a></li>
-                    <li><a href="">02. Шкафы-купе</a></li>
-                    <li><a href="">03. Детские</a></li>
-                    <li><a href="">04. Материалы</a></li>
+                    <li><a href="#" data-url-img="/assets/img/portf/wwd-img.png">01. Кухни</a></li>
+                    <li><a href="#" data-url-img="/assets/img/portf/shkafKupe.jpg">02. Шкафы-купе</a></li>
+                    <li><a href="#" data-url-img="/assets/img/portf/children.jpg">03. Детские</a></li>
+                    <li><a href="#" data-url-img="/assets/img/portf/shkafKupe.jpg">04. Материалы</a></li>
                 </ul>
 
                 <div class="section-title">
@@ -67,7 +92,7 @@
             </div>
             <div class="col-md-6 col-12 my-vertical-align">
                 <div class="img-block">
-                    <img src="/assets/img/wwd-img.png" alt="">
+                    <img class="img-dir" src="/assets/img/portf/wwd-img.png" alt="">
                     <div class="img-block-dots"></div>
                 </div>
                 <div class="counter-block grid-type1">
@@ -89,31 +114,36 @@
     </div>
 </section>
 
-<section class="portfolio bootstrap-wrapper dark-section" style="background-image: url('/assets/img/bg_3.png')">
+<section class="portfolio bootstrap-wrapper dark-section">
+    <img src="/assets/img/bg_3.png" class="img-bg-portfolio" alt="">
     <div class="section-side-title">Наши работы</div>
     <div class="vert-cent">
         <div class="container">
             <div class="section-title">Последние проекты</div>
             <div class="row portfolio-grid">
                 <div class="item col-lg-3 col-md-4 col-6">
-                    <div class="title">Кухни</div>
+                    <a href="#" class="title">Кухни</a>
                     <div class="img" data-url="/assets/img/bg_3.png"></div>
                 </div>
                 <div class="item col-lg-3 col-md-4 col-6">
-                    <div class="title">Шкафы-купе</div>
-                    <div class="img" data-url="/assets/img/bg_3.png"></div>
+                    <a href="#" class="title">Шкафы-купе</a>
+                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
                 </div>
                 <div class="item col-lg-3 col-md-4 col-6">
-                    <div class="title">Детские</div>
+                    <a href="#" class="title">Детские</a>
+                    <div class="img" data-url="/assets/img/portf/det-min.jpg"></div>
                 </div>
                 <div class="item col-lg-3 col-md-4 col-6">
-                    <div class="title">Тумбы под ТВ</div>
+                    <a href="#" class="title">Тумбы под ТВ</a>
+                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
                 </div>
                 <div class="item col-lg-3 col-md-4 col-6">
-                    <div class="title">Столы</div>
+                    <a href="#" class="title">Столы</a>
+                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
                 </div>
                 <div class="item col-lg-3 col-md-4 col-6">
-                    <div class="title">Разное</div>
+                    <a href="#" class="title">Разное</a>
+                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
                 </div>
             </div>
             <a href="#asdasd" class="btn-arrow btn-portfolio">Смотреть все портфолио</a>

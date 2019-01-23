@@ -25,7 +25,7 @@ gulp.task('serve-proxy', function () {
     browserSync.init({
         proxy: "http://pug.loc/"
     });
-    gulp.watch(["*.php", "*.html", 'css/*.*', 'js/*.*']).on('change', browserSync.reload);
+    gulp.watch(["*.php", "*.html", 'css/*.*', 'assets/js/*.*']).on('change', browserSync.reload);
 });
 
 gulp.task('serve-loc', function() {
