@@ -21,31 +21,42 @@ $(function () {
     });
 
     $('.portfolio-grid .item').on('mouseover', function () {
-        let $img = $('section.portfolio').find(".img-bg-portfolio");
+        let imgId = $(this).data('img-id');
+        let $image = $('.img-bg-portfolio[data-img-id='+ imgId +']');
+        let imgUrl = $image.data('url');
+        $('.img-bg-portfolio').removeClass('active');
+        $image.attr('src', imgUrl).addClass('active');
+        /*let $img = $('section.portfolio').find(".img-bg-portfolio");
         $img.removeClass('active');
         let imgUrl = $(this).find('.img').data('url');
         $img.attr('src', imgUrl);
-        $img.addClass('active');
+        $img.addClass('active');*/
     });
 
     $(window).scroll(function (e) {
-        console.log("высота до начала страницы "+$(window).scrollTop());
-        console.log("высота блока " + $('.first-block').height());
-        console.log(e.originalEvent);
-        //console.log(e.originalEvent.wheelDelta);
-        if (e.originalEvent.wheelDelta < 0) {
-            if ($(window).scrollTop() < $('.first-block').height()) {
-                $('header').addClass('scroll');
-                $('html, body').animate({
-                    scrollTop: $('.wwd').offset().top + 40
-                });
-            } else {
-                $('header').removeClass('scroll');
-            }
+        if ($(window).scrollTop() >= 200) {
+            $('header').addClass('scroll');
         } else {
-            if ($(window).scrollTop() <= $('.first-block').height()) {
-                $('header').removeClass('scroll');
+            $('header').removeClass('scroll');
+        }
+    });
+
+    $(window).on('mousewheel', function(e){
+        if (e.originalEvent.wheelDelta < 0) {
+            if ($(window).scrollTop() < $('.first-block').height()-300) {
+                $('html, body').animate({
+                    scrollTop: $('.wwd').offset().top-$('header').height()
+                });
             }
+        }
+    });
+    $('.order-modal-open').on('click', function(e){
+        e.preventDefault();
+        $('.mymodal-container').addClass('open');
+    });
+    $('.mymodal-container').on('click', function(e){
+        if($(e.target).is('.mymodal-container') || $(e.target).is('.mymodal-close')){
+            $('.mymodal-container').removeClass('open');
         }
     });
 

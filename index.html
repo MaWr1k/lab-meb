@@ -18,14 +18,15 @@
 <body>
 
 <header>
-    <div class="logo"><img src="/assets/img/lab_logo_white.svg" alt=""></div>
+    <div class="logo"><img class="logo-white" src="/assets/img/lab_logo_white.svg" alt="">
+        <img src="/assets/img/lab_logo_black.svg" alt="" class="logo-black"></div>
     <div class="phone-top">Свяжитесь с нами: <a href="tel:0121234567">(012) 123 45 67</a></div>
     <div class="soc-top">
         <a href="http://fb" class="soc-link"><i class="fab fa-facebook"></i></a>
         <a href="http://fb" class="soc-link"><i class="fab fa-instagram"></i></a>
         <a href="http://fb" class="soc-link"><i class="fab fa-google-plus-g"></i></a>
     </div>
-    <div class="btn-colored btn-top">Заказать просчет</div>
+    <div class="btn-colored btn-top order-modal-open">Заказать просчет</div>
     <div class="menu-btn">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -60,53 +61,58 @@
 </div>
 <section class="first-block dark-section bootstrap-wrapper">
     <div class="section-side-title">Знакомство</div>
-    <div class="container">
-        <div class="main-slider">
-            <div class="ms-item">
-                <div class="ms-mini-desc">Добро пожаловать<br/>в Лабораторию</div>
-                <div class="ms-title">Доверьтесь нам - и мы сделаем <span>конфетку</span>, которой вы будете восхищаться
-                    снова и снова
+    <div class="boxed">
+        <div class="container">
+            <div class="main-slider">
+                <div class="ms-item">
+                    <div class="ms-mini-desc">Добро пожаловать<br/>в Лабораторию</div>
+                    <div class="ms-title">Доверьтесь нам - и мы сделаем <span>конфетку</span>, которой вы будете
+                        восхищаться
+                        снова и снова
+                    </div>
+                    <div class="ms-btn btn-colored order-modal-open">Заказать просчет</div>
                 </div>
-                <div class="ms-btn btn-colored">Заказать просчет</div>
             </div>
         </div>
     </div>
 </section>
 <section class="wwd light-section bootstrap-wrapper">
     <div class="section-side-title">Что мы делаем</div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-12 my-vertical-align">
-                <div class="section-title">Направления</div>
-                <ul class="list-dir">
-                    <li><a href="#" data-url-img="/assets/img/portf/wwd-img.png">01. Кухни</a></li>
-                    <li><a href="#" data-url-img="/assets/img/portf/shkafKupe.jpg">02. Шкафы-купе</a></li>
-                    <li><a href="#" data-url-img="/assets/img/portf/children.jpg">03. Детские</a></li>
-                    <li><a href="#" data-url-img="/assets/img/portf/shkafKupe.jpg">04. Материалы</a></li>
-                </ul>
+    <div class="boxed">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12 my-vertical-align">
+                    <div class="section-title">Направления</div>
+                    <ul class="list-dir">
+                        <li><a href="#" data-url-img="/assets/img/portf/wwd-img.png">01. Кухни</a></li>
+                        <li><a href="#" data-url-img="/assets/img/portf/shkafKupe.jpg">02. Шкафы-купе</a></li>
+                        <li><a href="#" data-url-img="/assets/img/portf/children.jpg">03. Детские</a></li>
+                        <li><a href="#" data-url-img="/assets/img/portf/shkafKupe.jpg">04. Материалы</a></li>
+                    </ul>
 
-                <div class="section-title">
-                    Наша миссия<br/>разрабатывать <span>лучшие</span> дизайнерские решения
-                </div>
-                <a href="/about" class="wwd-btn btn-arrow">О нас</a>
-            </div>
-            <div class="col-md-6 col-12 my-vertical-align">
-                <div class="img-block">
-                    <img class="img-dir" src="/assets/img/portf/wwd-img.png" alt="">
-                    <div class="img-block-dots"></div>
-                </div>
-                <div class="counter-block grid-type1">
-                    <div class="counter-item grid-item">
-                        <div class="number">3521</div>
-                        <div class="title">довольных<br/>клиентов</div>
+                    <div class="section-title">
+                        Наша миссия<br/>разрабатывать <span>лучшие</span> дизайнерские решения
                     </div>
-                    <div class="counter-item grid-item">
-                        <div class="number">200</div>
-                        <div class="title">завершенных<br/>проетов</div>
+                    <a href="/about" class="wwd-btn btn-arrow">О нас</a>
+                </div>
+                <div class="col-md-6 col-12 my-vertical-align">
+                    <div class="img-block">
+                        <img class="img-dir" src="/assets/img/portf/wwd-img.png" alt="">
+                        <div class="img-block-dots"></div>
                     </div>
-                    <div class="counter-item grid-item">
-                        <div class="number">5689</div>
-                        <div class="title">дополненных<br/>интерьеров</div>
+                    <div class="counter-block grid-type1">
+                        <div class="counter-item grid-item">
+                            <div class="number">3521</div>
+                            <div class="title">довольных<br/>клиентов</div>
+                        </div>
+                        <div class="counter-item grid-item">
+                            <div class="number">200</div>
+                            <div class="title">завершенных<br/>проетов</div>
+                        </div>
+                        <div class="counter-item grid-item">
+                            <div class="number">5689</div>
+                            <div class="title">дополненных<br/>интерьеров</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,76 +121,88 @@
 </section>
 
 <section class="portfolio bootstrap-wrapper dark-section">
-    <img src="/assets/img/bg_3.png" class="img-bg-portfolio" alt="">
+    <img src="/assets/img/bg_3.png" data-url="/assets/img/bg_3.png" data-img-id="1" class="img-bg-portfolio active"
+         alt="">
+    <img src="/assets/img/bg_3.png" data-url="/assets/img/portf/shkaf2.jpg" data-img-id="2" class="img-bg-portfolio"
+         alt="">
+    <img src="/assets/img/bg_3.png" data-url="/assets/img/portf/det-min.jpg" data-img-id="3" class="img-bg-portfolio"
+         alt="">
+    <img src="/assets/img/bg_3.png" data-url="/assets/img/portf/det-min.jpg" data-img-id="4" class="img-bg-portfolio"
+         alt="">
+    <img src="/assets/img/bg_3.png" data-url="/assets/img/portf/det-min.jpg" data-img-id="5" class="img-bg-portfolio"
+         alt="">
+    <img src="/assets/img/bg_3.png" data-url="/assets/img/portf/det-min.jpg" data-img-id="6" class="img-bg-portfolio"
+         alt="">
     <div class="section-side-title">Наши работы</div>
-    <div class="vert-cent">
-        <div class="container">
-            <div class="section-title">Последние проекты</div>
-            <div class="row portfolio-grid">
-                <div class="item col-lg-3 col-md-4 col-6">
-                    <a href="#" class="title">Кухни</a>
-                    <div class="img" data-url="/assets/img/bg_3.png"></div>
+    <div class="boxed">
+        <div class="vert-cent">
+            <div class="container">
+                <div class="section-title">Последние проекты</div>
+                <div class="row portfolio-grid">
+                    <div class="item col-xl-3 col-md-4 col-6" data-img-id="1">
+                        <a href="#" class="title">Кухни</a>
+                    </div>
+                    <div class="item col-xl-3 col-md-4 col-6" data-img-id="2">
+                        <a href="#" class="title">Шкафы-купе</a>
+                    </div>
+                    <div class="item col-xl-3 col-md-4 col-6" data-img-id="3">
+                        <a href="#" class="title">Детские</a>
+                    </div>
+                    <div class="item col-xl-3 col-md-4 col-6" data-img-id="4">
+                        <a href="#" class="title">Тумбы под ТВ</a>
+                        <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
+                    </div>
+                    <div class="item col-xl-3 col-md-4 col-6" data-img-id="5">
+                        <a href="#" class="title">Столы</a>
+                        <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
+                    </div>
+                    <div class="item col-xl-3 col-md-4 col-6" data-img-id="6">
+                        <a href="#" class="title">Разное</a>
+                        <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
+                    </div>
                 </div>
-                <div class="item col-lg-3 col-md-4 col-6">
-                    <a href="#" class="title">Шкафы-купе</a>
-                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
-                </div>
-                <div class="item col-lg-3 col-md-4 col-6">
-                    <a href="#" class="title">Детские</a>
-                    <div class="img" data-url="/assets/img/portf/det-min.jpg"></div>
-                </div>
-                <div class="item col-lg-3 col-md-4 col-6">
-                    <a href="#" class="title">Тумбы под ТВ</a>
-                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
-                </div>
-                <div class="item col-lg-3 col-md-4 col-6">
-                    <a href="#" class="title">Столы</a>
-                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
-                </div>
-                <div class="item col-lg-3 col-md-4 col-6">
-                    <a href="#" class="title">Разное</a>
-                    <div class="img" data-url="/assets/img/portf/shkaf2.jpg"></div>
-                </div>
+                <a href="#asdasd" class="btn-arrow btn-portfolio">Смотреть все портфолио</a>
             </div>
-            <a href="#asdasd" class="btn-arrow btn-portfolio">Смотреть все портфолио</a>
         </div>
     </div>
 </section>
 <section class="ww-offer bootstrap-wrapper light-section">
     <div class="section-side-title">Чем мы особенны</div>
-    <div class="vert-cent">
-        <div class="container">
-            <div class="section-title">Что мы вам предлогаем</div>
-            <div class="row">
-                <div class="wwo-item col-lg-4 col-md-6">
-                    <div class="wwo-icon"><img src="/assets/img/icon/1icon.svg" alt=""></div>
-                    <div class="wwo-title">Порядочность</div>
-                    <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
-                </div>
-                <div class="wwo-item col-lg-4 col-md-6">
-                    <div class="wwo-icon"><img src="/assets/img/icon/2icon.svg" alt=""></div>
-                    <div class="wwo-title">Порядочность</div>
-                    <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
-                </div>
-                <div class="wwo-item col-lg-4 col-md-6">
-                    <div class="wwo-icon"><img src="/assets/img/icon/3icon.svg" alt=""></div>
-                    <div class="wwo-title">Порядочность</div>
-                    <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
-                </div>
-                <div class="wwo-item col-lg-4 col-md-6">
-                    <div class="wwo-icon"><img src="/assets/img/icon/4icon.svg" alt=""></div>
-                    <div class="wwo-title">Порядочность</div>
-                    <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
-                </div>
-                <div class="wwo-item col-lg-4 col-md-6">
-                    <div class="wwo-icon"><img src="/assets/img/icon/5icon.svg" alt=""></div>
-                    <div class="wwo-title">Порядочность</div>
-                    <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
-                </div>
-                <div class="wwo-item col-lg-4 col-md-6">
-                    <div class="wwo-icon"><img src="/assets/img/icon/6icon.svg" alt=""></div>
-                    <div class="wwo-title">Порядочность</div>
-                    <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+    <div class="boxed">
+        <div class="vert-cent">
+            <div class="container">
+                <div class="section-title">Что мы вам предлогаем</div>
+                <div class="row">
+                    <div class="wwo-item col-lg-4 col-md-6">
+                        <div class="wwo-icon"><img src="/assets/img/icon/1icon.svg" alt=""></div>
+                        <div class="wwo-title">Порядочность</div>
+                        <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+                    </div>
+                    <div class="wwo-item col-lg-4 col-md-6">
+                        <div class="wwo-icon"><img src="/assets/img/icon/2icon.svg" alt=""></div>
+                        <div class="wwo-title">Порядочность</div>
+                        <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+                    </div>
+                    <div class="wwo-item col-lg-4 col-md-6">
+                        <div class="wwo-icon"><img src="/assets/img/icon/3icon.svg" alt=""></div>
+                        <div class="wwo-title">Порядочность</div>
+                        <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+                    </div>
+                    <div class="wwo-item col-lg-4 col-md-6">
+                        <div class="wwo-icon"><img src="/assets/img/icon/4icon.svg" alt=""></div>
+                        <div class="wwo-title">Порядочность</div>
+                        <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+                    </div>
+                    <div class="wwo-item col-lg-4 col-md-6">
+                        <div class="wwo-icon"><img src="/assets/img/icon/5icon.svg" alt=""></div>
+                        <div class="wwo-title">Порядочность</div>
+                        <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+                    </div>
+                    <div class="wwo-item col-lg-4 col-md-6">
+                        <div class="wwo-icon"><img src="/assets/img/icon/6icon.svg" alt=""></div>
+                        <div class="wwo-title">Порядочность</div>
+                        <div class="wwo-desc">Индивидуальный подход к каждому клиенту и гарантия порядочности</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -192,46 +210,51 @@
 </section>
 <section class="steps bootstrap-wrapper light-section">
     <div class="section-side-title">Как мы работаем</div>
-    <div class="vert-cent">
-        <div class="container">
-            <div class="section-title">
-                Схема работы
-            </div>
-            <div class="steps-grid">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-text">Вы звоните нам и заказываете выезд замерщика, либо отправляете на наш
-                        электронный адрес проект для предварительного просчета
-                    </div>
+    <div class="boxed">
+        <div class="vert-cent">
+            <div class="container">
+                <div class="section-title">
+                    Схема работы
                 </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-text">Мастер вместе с Вами рисует эскиз будущей мебели, производит замеры,
-                        оговаривает ориентировочную стоимость изготовления мебели
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Вы звоните нам и заказываете выезд замерщика, либо отправляете на наш
+                            электронный адрес проект для предварительного просчета
+                        </div>
                     </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-text">Мы создаем 3D-проект будущей мебели, просчитываем точную стоимость и сообщаем
-                        ее Вам.
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Мастер вместе с Вами рисует эскиз будущей мебели, производит замеры,
+                            оговаривает ориентировочную стоимость изготовления мебели
+                        </div>
                     </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <div class="step-text">Мы оговариваем время и место заключения договора, мастер приезжает и
-                        подписывает договор. Вы оплачиваете сумму в размере 70% от стоимости заказа, которая обозначена
-                        в договоре. Один экземпляр договора остается у Вас.
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Мы создаем 3D-проект будущей мебели, просчитываем точную стоимость и
+                            сообщаем
+                            ее Вам.
+                        </div>
                     </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">5</div>
-                    <div class="step-text">Через 1-4 недели (в зависимости от сложности заказа) мы приезжаем и
-                        устанавливаем вашу мебель. Вы оплачиваете оставшуюся часть оговоренной суммы и с удовольствием
-                        пользуетесь своей новой мебелью!
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Мы оговариваем время и место заключения договора, мастер приезжает и
+                            подписывает договор. Вы оплачиваете сумму в размере 70% от стоимости заказа, которая
+                            обозначена
+                            в договоре. Один экземпляр договора остается у Вас.
+                        </div>
                     </div>
-                </div>
-                <div class="step-item">
-                    <div class="btn-transparent btn-steps">Заказать просчет</div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-text">Через 1-4 недели (в зависимости от сложности заказа) мы приезжаем и
+                            устанавливаем вашу мебель. Вы оплачиваете оставшуюся часть оговоренной суммы и с
+                            удовольствием
+                            пользуетесь своей новой мебелью!
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="btn-transparent btn-steps order-modal-open">Заказать просчет</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,39 +266,58 @@
     <div class="section-side-title">
         Отзывы и партнеры
     </div>
-    <div class="vert-cent">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="section-title quote">
-                        Завершенный <span>дизайн</span><br/> и <span>надежность</span> работы<br/> - те вещи, которые мы
-                        вам предлагаем
-                    </div>
-                    <div class="rev-container">
-                        <div class="rev-item">
-                            <div class="rev-text">"Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн." Спасибо Лаборатории за прекрасную работую"
-                            </div>
-                            <div class="rev-author">Джон Доу</div>
-                            <div class="rev-desc">Владелец апартаментов в Днепре</div>
+    <div class="boxed">
+        <div class="vert-cent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="section-title quote">
+                            Завершенный <span>дизайн</span><br/> и <span>надежность</span> работы<br/> - те вещи,
+                            которые мы
+                            вам предлагаем
                         </div>
-                        <div class="rev-item">
-                            <div class="rev-text">"Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн." Спасибо Лаборатории за прекрасную работую"
+                        <div class="rev-container">
+                            <div class="rev-item">
+                                <div class="rev-text">"Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                                    вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
+                                    начала
+                                    XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и
+                                    форм
+                                    шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только
+                                    успешно
+                                    пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн."
+                                    Спасибо Лаборатории за прекрасную работую"
+                                </div>
+                                <div class="rev-author">Джон Доу</div>
+                                <div class="rev-desc">Владелец апартаментов в Днепре</div>
                             </div>
-                            <div class="rev-author">Джон Доу</div>
-                            <div class="rev-desc">Владелец апартаментов в Днепре</div>
+                            <div class="rev-item">
+                                <div class="rev-text">"Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                                    вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с
+                                    начала
+                                    XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и
+                                    форм
+                                    шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только
+                                    успешно
+                                    пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн."
+                                    Спасибо Лаборатории за прекрасную работую"
+                                </div>
+                                <div class="rev-author">Джон Доу</div>
+                                <div class="rev-desc">Владелец апартаментов в Днепре</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-12 offset-lg-2 partners-col">
-                    <div class="section-title">
-                        Наши партнеры
-                    </div>
-                    <div class="partners-logo">
-                        <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
-                        <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
-                        <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
-                        <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
-                        <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
+                    <div class="col-lg-4 col-12 offset-lg-2 partners-col">
+                        <div class="section-title">
+                            Наши партнеры
+                        </div>
+                        <div class="partners-logo">
+                            <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
+                            <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
+                            <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
+                            <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
+                            <div class="p-img"><img src="/assets/img/fitCurves.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -287,37 +329,40 @@
     <div class="section-side-title">
         Контакты
     </div>
-    <div class="vert-cent">
-        <div class="container">
-            <div class="section-title">Давайте обусдим детали</div>
-            <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4434.682968214291!2d35.25606140560067!3d48.63131144588114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d94522f4fc333f%3A0x5e4ac6f51c7b9164!2z0YPQuy4g0JPQtdGC0YzQvNCw0L3RgdC60LDRjywgMTksINCd0L7QstC-0LzQvtGB0LrQvtCy0YHQuiwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDUxMjAw!5e0!3m2!1sru!2sua!4v1547814089701" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            <div class="grid-type2">
-                <div class="grid-item">
-                    <div class="row">
-                        <div class="col-6 grid-title">Напишите нам</div>
-                        <div class="col-6 grid-text">
-                            <a href="mailto:mail">mail@gmail.com</a>
+    <div class="boxed">
+        <div class="vert-cent">
+            <div class="container">
+                <div class="section-title">Давайте обусдим детали</div>
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4434.682968214291!2d35.25606140560067!3d48.63131144588114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d94522f4fc333f%3A0x5e4ac6f51c7b9164!2z0YPQuy4g0JPQtdGC0YzQvNCw0L3RgdC60LDRjywgMTksINCd0L7QstC-0LzQvtGB0LrQvtCy0YHQuiwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDUxMjAw!5e0!3m2!1sru!2sua!4v1547814089701"
+                            width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="grid-type2">
+                    <div class="grid-item">
+                        <div class="row">
+                            <div class="col-6 grid-title">Напишите нам</div>
+                            <div class="col-6 grid-text">
+                                <a href="mailto:mail">mail@gmail.com</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="grid-item">
-                    <div class="row">
-                        <div class="col-6 grid-title">Позвоните нам</div>
-                        <div class="col-6 grid-text">
-                            <p>KYIVSTAR</p>
-                            <a href="tel:">(097) 991 18 56</a>
-                            <p>VODAFONE</p>
-                            <a href="tel:">(095) 781 08 84</a>
+                    <div class="grid-item">
+                        <div class="row">
+                            <div class="col-6 grid-title">Позвоните нам</div>
+                            <div class="col-6 grid-text">
+                                <p>KYIVSTAR</p>
+                                <a href="tel:">(097) 991 18 56</a>
+                                <p>VODAFONE</p>
+                                <a href="tel:">(095) 781 08 84</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="grid-item">
-                    <div class="row">
-                        <div class="col-6 grid-title">Посетите нас</div>
-                        <div class="col-6 grid-text">
-                            <span>г. Новомосковск ул. Гетманская, 19,<br />ТЦ "Алые Паруса"</span>
+                    <div class="grid-item">
+                        <div class="row">
+                            <div class="col-6 grid-title">Посетите нас</div>
+                            <div class="col-6 grid-text">
+                                <span>г. Новомосковск ул. Гетманская, 19,<br/>ТЦ "Алые Паруса"</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -334,6 +379,27 @@
         Наверх
     </div>
 </footer>
+<div class="mymodal-container">
+    <div class="mymodal-body">
+        <div class="mymodal-close"><img src="/assets/img/icon/close.svg" alt=""></div>
+        <div class="mymodal-title">Заказать просчет</div>
+        <div class="mymodal-form bootstrap-wrapper">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-4"><input name="name" placeholder="Имя" type="text"></div>
+                    <div class="col-md-4"><input name="email" placeholder="Email" type="text"></div>
+                    <div class="col-md-4"><input name="phone" placeholder="Телефон" type="text"></div>
+                    <div class="col-md-12"><textarea name="msg" id="" cols="30" rows="10" placeholder="Комментарий"></textarea></div>
+                </div>
+                <div class="bottom-line">
+                    <div class="btn-transparent btn-mymodal">Отправить</div>
+                    <div class="protect-text"><i class="fas fa-user-lock"></i> Ваши персональные данные не будут переданы третьим лицам</div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
 <script src="/assets/js/jquery-3.3.1.min.js"></script>
 <script src="/assets/js/slick.min.js"></script>
 <script src="/assets/js/common.js"></script>
