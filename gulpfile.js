@@ -34,7 +34,7 @@ gulp.task('serve-loc', function() {
             baseDir: "./"
         }
     });
-    gulp.watch(["*.php", "*.html", 'css/*.*', 'js/*.*']).on('change', browserSync.reload);
+    gulp.watch(["*.php", "*.html", 'css/*.*', 'assets/js/*.*']).on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series('styles', gulp.parallel('watch', 'serve-loc')));

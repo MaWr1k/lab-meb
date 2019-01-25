@@ -1,9 +1,9 @@
 $emphasis: #FF7838;
 
+@import "include/adaptive";
 @import "include/button";
 @import "include/slick";
 @import "include/slick-theme";
-@import "include/adaptive";
 
 @font-face {
   font-family: Muller; /* Имя шрифта */
@@ -45,6 +45,13 @@ body {
   font-weight: bold;
   line-height: 40px;
   letter-spacing: 0.5px;
+  @include tablet(){
+    text-align: center;
+  }
+  @include mobile(){
+    font-size: 26px;
+    line-height: 34px;
+  }
   span {
     color: $emphasis;
   }
@@ -58,12 +65,14 @@ body {
     padding: 100px 5rem;
   }
   @include laptop(){
-    padding: 40px 2rem;
+    padding: 60px 2rem;
   }
   @include tablet(){
     padding: 80px 1rem;
   }
-
+  @include mobile(){
+    padding: 40px 10px;
+  }
 }
 a {
   transition-duration: 0.3s;
@@ -127,18 +136,33 @@ header {
   align-items: center;
   transition-duration: 0.2s;
   //background-color: rgba(0, 0, 0, 0.1);
+  .mobile{
+    display: none;
+  }
   .logo-black{
     display: none;
+  }
+  @include mobile(){
+    .web{
+      display: none;
+    }
+    .mobile{
+      display: block;
+    }
   }
   @include laptop(){
     padding: 20px 40px;
   }
   .logo {
     width: 150px;
+    @include mobile(){
+      width: 60px;
+    }
     img {
       width: 100%;
     }
   }
+
 }
 
 header.scroll {
@@ -174,7 +198,6 @@ header.scroll {
   background-color: #F9F9F9;
   padding: 80px;
   transition: all .6s ease;
-  box-shadow: 0px 0 40px rgba(0, 0, 0, 0.3);
   @include desktop(){
     padding: 60px;
   }
@@ -188,6 +211,7 @@ header.scroll {
     right: -100%;
   }
   &.open {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     right: 0;
     .menu {
       opacity: 1;
@@ -292,7 +316,7 @@ header.scroll {
 }
 
 .soc-top {
-  @include mobile(){
+  @include tablet(){
     display: none;
   }
   a {
@@ -327,8 +351,20 @@ header.scroll {
   background-size: cover;
   height: 100vh;
   @include desktop(){
-    height: auto;
-    padding: 100px 0;
+    padding: 60px 0;
+    padding-top: 80px;
+  }
+  @include laptop(){
+    padding: 40px 0;
+    padding-top: 80px;
+  }
+  .boxed{
+    @include desktop(){
+      padding: 40px 4rem;
+    }
+    @include laptop(){
+      padding: 10px;
+    }
   }
   .container {
     display: flex;
@@ -343,6 +379,9 @@ header.scroll {
     font-size: 16px;
     font-weight: 300;
     padding-bottom: 50px;
+    @include desktop(){
+      padding-bottom: 30px;
+    }
   }
   .ms-title {
     text-transform: uppercase;
@@ -351,14 +390,23 @@ header.scroll {
     line-height: 60px;
     font-weight: bold;
     max-width: 700px;
+    padding-bottom: 50px;
+    @include desktop(){
+      font-size: 40px;
+      line-height: 50px;
+      padding-bottom: 40px;
+    }
     @include laptop(){
       font-size: 36px;
       line-height: 48px;
     }
+    @include tablet(){
+      font-size: 28px;
+      line-height: 34px;
+    }
     span {
       color: $emphasis;
     }
-    padding-bottom: 50px;
   }
   .ms-btn {
     position: relative;
@@ -407,9 +455,16 @@ header.scroll {
     }
   }
 }
-
-.wwd-btn:hover {
-  padding-left: 20px;
+.wwd-slogan{
+  text-align: left;
+}
+.wwd-btn{
+  @include laptop(){
+    margin-bottom: 40px;
+  }
+  &:hover {
+    padding-left: 20px;
+  }
 }
 
 .vert-cent {
@@ -423,9 +478,18 @@ header.scroll {
   position: relative;
   margin-left: 130px;
   margin-bottom: 130px;
+  @include desktop(){
+    margin-left: 60px;
+    margin-bottom: 110px;
+  }
+  @include mobile(){
+    margin-left: 40px;
+    margin-bottom: 80px;
+  }
   img {
     width: 100%;
     max-height: 360px;
+    object-fit: cover;
   }
 }
 
@@ -437,10 +501,19 @@ header.scroll {
   width: 101%;
   top: 50%;
   background: url("/assets/img/dots-dark2.png") 0 0 repeat;
+  @include desktop(){
+    left: -10%;
+  }
+  @include mobile(){
+    left: -15%;
+  }
 }
 
 .grid-type1 {
   display: flex;
+  @include mobile(){
+    flex-direction: column;
+  }
 }
 
 .grid-item {
@@ -452,6 +525,11 @@ header.scroll {
   border: 1px solid #343434;
   box-sizing: border-box;
   width: 33.33333%;
+  @include mobile(){
+    width: 100%;
+    border: none;
+    min-height: 100px;
+  }
 }
 
 .grid-item:nth-child(1),
@@ -479,6 +557,57 @@ header.scroll {
   }
 }
 
+
+.grid-type2 {
+  display: flex;
+  @include mobile(){
+    flex-direction: column;
+  }
+
+  p {
+    margin: 0;
+  }
+  .grid-item {
+    align-items: flex-start;
+    flex-direction: row;
+    @include mobile(){
+      border-bottom: 1px solid #343434;
+    }
+    .row{
+      @include mobile(){
+        width: 100%;
+      }
+    }
+  }
+  .grid-text {
+
+    font-size: 14px;
+    font-family: Ubuntu;
+    p {
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+    a {
+      color: #777;
+      padding-bottom: 30px;
+      display: block;
+      &:last-child{
+        @include mobile(){
+          padding-bottom: 0;
+        }
+      }
+
+      &:hover {
+        color: #343434;
+      }
+    }
+    span {
+      color: #777;
+      line-height: 20px;
+    }
+  }
+}
+
 .portfolio {
   background-color: black;
   background-size: cover;
@@ -486,6 +615,11 @@ header.scroll {
   overflow: hidden;
   .section-title {
     padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    @include mobile(){
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -506,6 +640,9 @@ header.scroll {
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
+    @include tablet(){
+      background-color: rgba(0, 0, 0, 0.6);
+    }
     &:hover {
       border-color: $emphasis;
       background-color: $emphasis;
@@ -555,6 +692,14 @@ header.scroll {
 .ww-offer {
   padding-left: 100px;
   padding-right: 100px;
+  @include desktop(){
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  @include laptop(){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .boxed {
     background: url("/assets/img/dots-dark2.png") 0 0 repeat;
   }
@@ -574,7 +719,15 @@ header.scroll {
   &:nth-child(3) {
     padding-bottom: 4rem;
   }
+  &:last-child{
+    @include tablet(){
+      padding-bottom: 0;
+    }
+  }
 
+  @include desktop(){
+    padding-bottom: 4rem;
+  }
   .wwo-icon {
     img {
       height: 76px;
@@ -604,6 +757,14 @@ header.scroll {
   background-position: top left;
   .section-title {
     padding-bottom: 4rem;
+    @include tablet(){
+      padding-bottom: 2rem;
+    }
+  }
+}
+.btn-steps{
+  @include tablet(){
+    margin: 0 auto;
   }
 }
 
@@ -628,8 +789,9 @@ header.scroll {
       width: 50%;
     }
     @include tablet(){
-      width: 90%;
-      padding-left: 10px;
+      width: 100%;
+      //padding-left: 10px;
+      padding-left: 0;
       background-image: none;
       margin-bottom: 100px;
     }
@@ -646,11 +808,23 @@ header.scroll {
       background-size: contain;
       background-position: left center;
       @include tablet(){
-        transform: rotate(90deg);
+        transform: translateX(-50%) rotate(90deg);
         left: 50%;
-        top: 20px;
+        top: 40px;
         width: 50px;
         height: 400px;
+      }
+      @include mobile(){
+        width: 20px;
+      }
+    }
+    &:last-child{
+      @include tablet(){
+        &:after{
+          display: none;
+        }
+        margin-bottom: 0;
+        min-height: 80px;
       }
     }
     &:first-child {
@@ -680,7 +854,7 @@ header.scroll {
         width: 50%;
       }
       @include tablet(){
-        width: 90%;
+        width: 100%;
       }
     }
   }
@@ -701,16 +875,33 @@ header.scroll {
     padding-right: 20px;
     font-family: Ubuntu;
     font-size: 16px;
+    @include mobile(){
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
 .partners {
-
+  background-size: cover;
 }
 
 .section-title.quote {
   padding-bottom: 180px;
   padding-left: 80px;
+  @include desktop(){
+    padding-bottom: 50px;
+    margin-top: 50px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: left;
+  }
+  @include mobile(){
+    padding-left: 40px;
+    margin-top: 20px;
+    line-height: 28px;
+    font-size: 22px;
+  }
 }
 
 .quote {
@@ -722,8 +913,14 @@ header.scroll {
     width: 64px;
     height: 50px;
     left: 10px;
+    background-repeat: no-repeat;
     background-image: url("/assets/img/icon/quote.svg");
     background-size: contain;
+    @include mobile(){
+      width: 30px;
+      top: -25px;
+      height: 30px;
+    }
   }
 }
 
@@ -758,19 +955,39 @@ header.scroll {
   align-items: center;
   .section-title {
     padding-bottom: 100px;
+    @include desktop(){
+      padding-bottom: 30px;
+      padding-top: 70px;
+    }
   }
 }
 
 .partners-logo {
+  @include desktop(){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .p-img {
     padding-bottom: 50px;
     cursor:pointer;
+    @include desktop(){
+      width: 45%;
+      text-align: center;
+    }
+    @include mobile(){
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 
 .contact {
   .section-title {
     padding-bottom: 100px;
+    @include mobile(){
+      padding-bottom: 80px;
+    }
   }
   #map {
     padding-bottom: 50px;
@@ -783,6 +1000,9 @@ header.scroll {
     @include laptop(){
       padding: 15px;
     }
+    @include mobile(){
+      padding-bottom: 40px;
+    }
   }
   .grid-title {
     font-size: 20px;
@@ -792,42 +1012,12 @@ header.scroll {
     font-family: Muller;
     @include desktop(){
       font-size: 18px;
+      padding-bottom: 20px;
     }
 
   }
 }
 
-.grid-type2 {
-  display: flex;
-  p {
-    margin: 0;
-  }
-  .grid-item {
-    align-items: flex-start;
-    flex-direction: row;
-  }
-  .grid-text {
-
-    font-size: 14px;
-    font-family: Ubuntu;
-    p {
-      padding-bottom: 10px;
-      font-weight: 600;
-    }
-    a {
-      color: #777;
-      padding-bottom: 30px;
-      display: block;
-      &:hover {
-        color: #343434;
-      }
-    }
-    span {
-      color: #777;
-      line-height: 20px;
-    }
-  }
-}
 
 footer {
   background-color: #232323;
@@ -836,6 +1026,12 @@ footer {
   justify-content: center;
   align-items: center;
   height: 70px;
+  @include mobile(){
+    padding: 15px;
+    flex-wrap: wrap;
+    height: auto;
+    text-align: center;
+  }
   a {
     color: white;
     &:hover {
@@ -845,6 +1041,10 @@ footer {
   p {
     margin: 0;
     padding-right: 100px;
+    @include mobile(){
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
   }
   .up-btn {
     cursor: pointer;
