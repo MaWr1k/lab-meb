@@ -43,7 +43,7 @@ $(function () {
 
     $(window).on('mousewheel', function(e){
         if (e.originalEvent.wheelDelta < 0) {
-            if ($(window).scrollTop() < $('.first-block').height()-300) {
+            if ($(window).scrollTop() < $('.first-block').height()-500) {
                 $('html, body').animate({
                     scrollTop: $('.wwd').offset().top-$('header').height()
                 });
@@ -59,5 +59,10 @@ $(function () {
             $('.mymodal-container').removeClass('open');
         }
     });
+
+    $('.up-btn').click(function() {
+        $('html, body').animate({scrollTop: 0},500);
+        return false;
+    })
 
 });
