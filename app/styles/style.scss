@@ -136,10 +136,11 @@ header {
   align-items: center;
   transition-duration: 0.2s;
   //background-color: rgba(0, 0, 0, 0.1);
+
   &.inner-page-header{
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     color: #343434;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     .logo-white{
       display: none;
     }
@@ -190,7 +191,7 @@ header {
 header.scroll {
   color: #343434;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   .logo-white{
     display: none;
   }
@@ -1051,7 +1052,7 @@ footer {
   height: 70px;
   @include mobile(){
     padding: 15px;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: auto;
     text-align: center;
   }
@@ -1253,6 +1254,9 @@ footer {
   }
   .section-title{
     line-height: 48px;
+    @include laptop(){
+      line-height: 34px;
+    }
   }
   .top-line{
     position: relative;
@@ -1261,6 +1265,11 @@ footer {
     padding-top: 30px;
     line-height: 26px;
     text-transform: uppercase;
+    @include laptop(){
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
     &:after{
       position: absolute;
       content: '';
@@ -1269,6 +1278,12 @@ footer {
       border: 2px solid $emphasis;
       left: 0;
       top: 0;
+      @include laptop(){
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -1279,6 +1294,10 @@ footer {
   font-size: 14px;
   letter-spacing: 0.5px;
   font-family: Ubuntu;
+  @include laptop(){
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
   .separator{
     display: inline-block;
     width: 10px;
@@ -1303,6 +1322,10 @@ footer {
   border: 3px solid $emphasis;
   border-radius: 50px;
   font-family: Muller;
+  @include laptop(){
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 
 .inner-page-desc{
@@ -1316,13 +1339,22 @@ footer {
 
 .wwd-container{
   background: url('/assets/img/dots-dark2.png') 0 0 repeat;
-  padding: 100px 0;
+  padding-top: 100px;
+  @include laptop(){
+    padding-top: 40px;
+  }
   .section-title{
     padding-bottom: 50px;
   }
 }
 .wwd-item{
+  @include laptop(){
+    padding-bottom: 40px;
+  }
   .icon-item{
+    @include laptop(){
+      text-align: center;
+    }
     img{
       height: 76px;
     }
@@ -1336,6 +1368,10 @@ footer {
     padding-top: 50px;
     padding-bottom: 30px;
     width: 130px;
+    @include laptop(){
+      margin: 0 auto;
+      text-align: center;
+    }
   }
   .desc{
     width: 200px;
@@ -1343,5 +1379,109 @@ footer {
     font-style: italic;
     line-height: 26px;
     color: #343434;
+    @include laptop(){
+      width: auto;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+.inner-wwd{
+  padding-bottom: 80px;
+  @include laptop(){
+    padding-bottom: 40px;
+  }
+}
+.inner-partners-logo{
+  display: flex;
+  flex-wrap: wrap;
+  a{
+    width: 33%;
+    padding-bottom: 50px;
+    @include laptop(){
+      width: 50%;
+    }
+    @include mobile(){
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    img{
+      width: 200px;
+      @include laptop(){
+        width: 90%;
+      }
+      @include mobile(){
+        max-width: 200px;
+      }
+    }
+  }
+}
+.inner-our-team{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.our-team{
+  padding: 100px 0;
+  @include laptop(){
+    padding: 60px 0;
+  }
+}
+.vacancy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #343434;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  @include laptop(){
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  @include mobile(){
+    height: 250px;
+  }
+}
+div.team-item {
+  width: 33%;
+  padding: 20px;
+  img {
+    width: 100%;
+   @include laptop(){
+     max-width: 250px;
+     margin: 0 auto;
+
+   }
+  }
+  @include laptop(){
+    width: 50%;
+    text-align: center;
+  }
+  @include mobile(){
+    width: 100%;
+  }
+}
+
+
+.about-container{
+  padding-bottom: 20px;
+}
+.main-image{
+  padding: 100px 60px;
+  @include laptop(){
+    padding: 40px 20px;
+    padding-bottom: 30px;
+  }
+  img{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
   }
 }
