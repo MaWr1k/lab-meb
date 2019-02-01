@@ -1287,6 +1287,21 @@ footer {
     }
   }
 }
+
+.inner-page-desc{
+  font-size: 16px;
+  font-family: Ubuntu;
+  line-height: 24px;
+  p{
+    margin-bottom: 20px;
+  }
+  a{
+    color: $emphasis;
+  }
+}
+.main-content{
+  padding: 100px 0;
+}
 .breadcrumbs{
   text-transform: uppercase;
   padding-top: 50px;
@@ -1327,16 +1342,6 @@ footer {
     margin-bottom: 20px;
   }
 }
-
-.inner-page-desc{
-  font-size: 16px;
-  font-family: Ubuntu;
-  line-height: 24px;
-  p{
-    margin-bottom: 20px;
-  }
-}
-
 .wwd-container{
   background: url('/assets/img/dots-dark2.png') 0 0 repeat;
   padding-top: 100px;
@@ -1484,4 +1489,65 @@ div.team-item {
     max-height: 400px;
     object-fit: cover;
   }
+}
+
+.portfolio-section{
+  margin: 0 60px;
+  border-bottom:1px solid rgba(52, 52, 52, 0.5);
+  padding-bottom: 50px;
+  @include laptop(){
+    margin: 0 30px;
+  }
+}
+.portfolio-slider{
+ /* display: flex;
+  overflow-x: scroll;*/
+
+}
+.portfolio-items-col{
+
+  .portfolio-item{
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    width: 100%;
+    height: 300px;
+    @include tablet(){
+      height: 200px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @include laptop(){
+      height: 200px;
+    }
+    //outline:1px solid green;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:first-child{
+      padding-top: 0;
+    }
+    &:last-child{
+      padding-bottom: 0;
+    }
+
+  }
+}
+.slick-prev{
+  @include laptop(){
+    left: -5px;
+  }
+}
+.slick-next{
+  @include laptop(){
+    right: -15px;
+  }
+}
+.map{
+  padding: 60px 60px;
 }
